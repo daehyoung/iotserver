@@ -27,3 +27,8 @@
 ## 3. firewall 활성화 
     sudo ufw enable
     ufw allow 22/tcp
+
+
+## etc.
+
+    https://www.st.com/resource/en/user_manual/dm00105262-developing-applications-on-stm32cube-with-rtos-stmicroelectronics.pdf
