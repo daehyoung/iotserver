@@ -1,8 +1,8 @@
 # iotserver
 
+## ssh server install
 
-
-##  1. hosts.allow 에 182.161.173.230 추가 
+###  1. hosts.allow 에 182.161.173.230 추가 
     sudo gedit /etc/hosts.allow 
 
     # /etc/hosts.allow: list of hosts that are allowed to access the system.
@@ -17,18 +17,30 @@
     182.161.173.230
 
 
-## 2. openssh server 설치 
+### 2. openssh server 설치 
 
     sudo apt-get install openssh-server
     sudo service ssh start
     sudo service ssh status
 
 
-## 3. firewall 활성화 
+### 3. firewall 활성화 
     sudo ufw enable
-    ufw allow 22/tcp
+    sudo ufw allow 22/tcp
 
 
-## etc.
+### etc.
 
     https://www.st.com/resource/en/user_manual/dm00105262-developing-applications-on-stm32cube-with-rtos-stmicroelectronics.pdf
+
+
+
+## docker install 
+
+    sudo apt install docker.io
+
+    sudo systemctl enable --now docker
+
+    sudo usermod -aG docker $USER
+
+    docker --version
